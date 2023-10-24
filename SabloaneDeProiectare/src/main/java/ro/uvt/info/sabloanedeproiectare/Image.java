@@ -1,9 +1,22 @@
 package ro.uvt.info.sabloanedeproiectare;
+
+import java.util.concurrent.TimeUnit;
+
 public class Image implements Element{
     String imageName;
-
     public Image(String imageName) {
         this.imageName = imageName;
+    }
+
+    public ImageProxy(String imageName) {
+        this.imageName = imageName;
+        try {
+            TimeUnit TimeUnit = null;
+            TimeUnit.SECONDS.sleep(5);
+    }catch (InterruptedException e)
+            {
+                e. printStackTrace();
+            }
     }
 
     public String getImageName() {
