@@ -4,7 +4,7 @@ import java.util.List;
 public class Book{
     private String title;
     private List<Author> authors = new ArrayList<>();
-    private List<Chapter> chapters = new ArrayList<>();
+    private List<TextElement> contents = new ArrayList<>();
 
     public Book(String title) {
         this.title = title;
@@ -14,25 +14,17 @@ public class Book{
         authors.add(author);
     }
 
-    public int createChapter(String chapterName) {
-        Chapter chapter = new Chapter(chapterName);
-        chapters.add(chapter);
-        return chapters.indexOf(chapter);
+    public void addContent(TextElement content) {
+        contents.add(content);
     }
-
-    public Chapter getChapter(int index) {
-        return chapters.get(index);
-    }
-
     public void print() {
-        System.out.println("Book Title: " + title);
+        System.out.println("Book: " + title);
         System.out.println("Authors:");
         for (Author author : authors) {
             author.print();
         }
-        System.out.println("Chapters:");
-        for (Chapter chapter : chapters) {
-            chapter.print();
+        for (TextElement content : contents) {
+            content.print();
         }
     }
 }
