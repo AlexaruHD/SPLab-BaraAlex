@@ -7,7 +7,6 @@ import ro.uvt.info.proiectsp.Book;
 import ro.uvt.info.proiectsp.Services.BookService;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/books")
@@ -32,7 +31,7 @@ public class BookController {
 
     @PostMapping
     public void createBook(@RequestBody Book book) {
-        bookService.createBook((Book) book);
+        bookService.createBook(book);
     }
 
     @PutMapping("/{id}")
