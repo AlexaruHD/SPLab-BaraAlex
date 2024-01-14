@@ -2,7 +2,7 @@ package ro.uvt.info.proiectsp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-public class Image implements TextElement, Picture {
+public class Image implements TextElement, Picture, Visitee {
     private String name;
 
     public Image(String name) {
@@ -12,6 +12,10 @@ public class Image implements TextElement, Picture {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void add(int index, TextElement element) {
@@ -31,7 +35,8 @@ public class Image implements TextElement, Picture {
         throw new UnsupportedOperationException("You cannot do that");
     }
 
-    public void print() {
-        System.out.println("Image with name: " + name);
+    @Override
+    public void accept(Visitor v) {
+        v.visitImage(this);
     }
 }

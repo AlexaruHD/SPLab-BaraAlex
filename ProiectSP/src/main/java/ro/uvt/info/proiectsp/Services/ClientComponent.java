@@ -1,4 +1,4 @@
-package ro.uvt.info.proiectsp.lab6;
+package ro.uvt.info.proiectsp.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

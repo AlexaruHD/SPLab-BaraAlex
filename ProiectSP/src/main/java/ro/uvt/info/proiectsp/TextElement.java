@@ -13,5 +13,6 @@ public interface TextElement {
     default void remove(List<TextElement> l, TextElement element) {
         l.remove(element);
     }
-    void print();
+
+
 }

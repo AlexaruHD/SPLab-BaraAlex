@@ -1,4 +1,4 @@
-package ro.uvt.info.proiectsp.lab6;
+package ro.uvt.info.proiectsp.Services;
 
 import org.springframework.stereotype.Component;
 

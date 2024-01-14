@@ -3,8 +3,9 @@ package ro.uvt.info.proiectsp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import ro.uvt.info.proiectsp.lab6.*;
+import ro.uvt.info.proiectsp.Services.ClientComponent;
+import ro.uvt.info.proiectsp.Services.*;
+
 @SpringBootApplication
 public class ProiectSpApplication {
 
