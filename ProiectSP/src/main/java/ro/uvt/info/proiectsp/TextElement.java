@@ -1,8 +1,6 @@
 package ro.uvt.info.proiectsp;
 import java.util.List;
 public interface TextElement {
-
-
     default List<TextElement> add(List<TextElement> l, TextElement element){
         l.add(element);
         return l;
