@@ -1,7 +1,10 @@
 package ro.uvt.info.proiectsp;
 import java.util.ArrayList;
 import java.util.List;
-public class Book{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Book {
     private String title;
     private List<Author> authors = new ArrayList<>();
     private List<TextElement> contents = new ArrayList<>();
@@ -17,6 +20,7 @@ public class Book{
     public void addContent(TextElement content) {
         contents.add(content);
     }
+
     public void print() {
         System.out.println("Book: " + title);
         System.out.println("Authors:");

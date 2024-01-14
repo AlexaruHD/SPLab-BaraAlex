@@ -1,15 +1,25 @@
 package ro.uvt.info.proiectsp;
 
-public class Paragraph implements TextElement {
+public class Paragraph implements TextElement, Visitee {
     private String text;
     private AlignStrategy alignStrategy;
     public Paragraph(String text) {
         this.text = text;
         this.alignStrategy = new AlignLeft();
     }
+    public void accept(Visitor v) {
+        v.visitParagraph(this);
+    }
 
     public void setAlignStrategy(AlignStrategy strategy) {
         this.alignStrategy = strategy;
+    }
+    public AlignStrategy getAlignStrategy(){
+        return alignStrategy;
+    }
+
+    public String getText(){
+        return text;
     }
 
     public void add(int index, TextElement element) {
@@ -24,11 +34,4 @@ public class Paragraph implements TextElement {
         throw new UnsupportedOperationException("You cannot do that");
     }
 
-    public void print() {
-        System.out.println("Paragraph: " + text);
-    }
-    public void print(int lineLength) {
-        String alignedText = alignStrategy.render("Paragraph: " + text, lineLength);
-        System.out.println(alignedText);
-    }
 }
