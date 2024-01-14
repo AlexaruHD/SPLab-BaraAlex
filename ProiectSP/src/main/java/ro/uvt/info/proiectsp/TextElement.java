@@ -1,9 +1,17 @@
 package ro.uvt.info.proiectsp;
+import java.util.List;
+public interface TextElement {
 
-public class TextElement {
-    // Base class for Text Elements like Image, Paragraph, Table
 
-    public void print() {
-        // Default implementation for printing TextElement
+    default List<TextElement> add(List<TextElement> l, TextElement element){
+        l.add(element);
+        return l;
     }
+    default TextElement get(List<TextElement> l, int index) {
+        return l.get(index);
+    }
+    default void remove(List<TextElement> l, TextElement element) {
+        l.remove(element);
+    }
+    void print();
 }
