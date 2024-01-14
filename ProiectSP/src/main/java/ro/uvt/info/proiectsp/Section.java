@@ -28,4 +28,14 @@ public class Section implements TextElement {
             element.print();
         }
     }
+    public void print(int lineLength) {
+        System.out.println(title);
+        for (TextElement element : content) {
+            if (element instanceof Paragraph) {
+                ((Paragraph) element).print(lineLength);
+            } else {
+                element.print();
+            }
+        }
+    }
 }
