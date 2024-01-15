@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor(force = true)
-public class Author {private String name;
+public class Author {
+    private String name;
     @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +26,5 @@ public class Author {private String name;
 
     public void setId(Long id) {
         this.id = id;
+    }
 }
