@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.*;
-import ro.uvt.info.splab.AllBooksSubject;
-import ro.uvt.info.splab.SseObserver;
+import ro.uvt.info.proiectsp.AllBooksSubject;
+import ro.uvt.info.proiectsp.SseObserver;
 
 @RequestMapping("/books-sse")
 public class BooksSseController {
